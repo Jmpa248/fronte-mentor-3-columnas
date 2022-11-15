@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --max-width-mobile: 375px;
+    --max-width-desktop: 1440px;
+    --primary-1: hsl(31, 77%, 52%);
+    --primary-2: hsl(184, 100%, 22%);
+    --primary-3: hsl(179, 100%, 13%);
+    --neutral-1: hsla(0, 0%, 100%, 0.75);
+    --neutral-2: hsl(0, 0%, 95%);
+}
+
+.mybody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--neutral-2);
+    background-color: var(--neutral-2);
+    min-height: 100vh;
+
+}
+
+.container {
+  
+    min-width: var(--max-width-mobile);
+    max-width: var(--max-width-desktop);
+    margin-left: auto;
+    margin-right: auto;
+   
+
+
+
+}
+
+.title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--neutral-1);
+}
+
+
+.sedans {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.luxury {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.sedans::before {
+    content: url('../images/icon-sedans.svg');
+}
+
+.suvs::before {
+    content: url('../images/icon-suvs.svg');
+}
+
+.luxury::before {
+    content: url('../images/icon-luxury.svg');
+}
+
+.sedans {
+    background-color: var(--primary-1);
+    padding: 15px;
+}
+
+.suvs {
+    background-color: var(--primary-2);
+    padding: 15px;
+}
+
+.luxury {
+    background-color: var(--primary-3);
+    padding: 15px;
+}
+
+.btn {
+    display: inline;
+    padding: .5em 1em;
+    width: 9em;
+    height: 7em;
+    text-decoration: none;
+    background-color: var(--neutral-2);
+    border-radius: 10rem;
+    font-size: 80%;
+    border: radius 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+    transition-property: all;
+    transition: 0.5s;
+    background-color: transparent;
+    color: var(--neutral-2);
+    outline-style: solid;
+    outline-color: var(--neutral-2);
+    outline-width: 1px;
+}
+
+.btn-primary1 {
+    color: var(--primary-1);
+    img
+}
+
+.btn-primary2 {
+    color: var(--primary-2);
+}
+
+.btn-primary3 {
+    color: var(--primary-3);
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        height: 300px;
+        min-height: 40vh;
+    }
+
+    .sedans {
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .luxury {
+        border-radius: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+}
